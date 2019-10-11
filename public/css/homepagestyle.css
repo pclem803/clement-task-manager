@@ -198,7 +198,8 @@ button {
 
 header {
     background-color: #557a95;
-	height: 10vh;
+	height: 100px;
+	width:100vw;
 	padding-top: 20px;
     background-size: cover;
     background-position: center;
@@ -313,7 +314,7 @@ footer {
 /* -------------------------------------------*/
 
 .homepage{
-	padding-top:20px;
+
 }
 .homepage-nav{
 	margin-bottom:0px;
@@ -617,7 +618,7 @@ h3 p {
 	height:225px;
 	font-size: 30px;
 	transition: width .5s, height .5s, font-size .5s;
-	transition-delay: .75s;
+	transition-delay: .33s;
 }
 
 
