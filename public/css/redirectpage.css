@@ -138,7 +138,7 @@ input[type=submit] {
 input[type=submit] {
     background-color:#fff;
     border: 1px solid #fff;
-    margin-left:53vh;
+    margin-left:43vw;
     color: #557a95;
     margin-right: 15px
 }
@@ -204,7 +204,6 @@ header {
     background-position: center;
 	background-attachment: fixed;
 	margin-bottom:0px;
-	min-width: 1000px;
 }
 
 .headerrow{
@@ -283,7 +282,7 @@ footer {
 
 
 .redirect-page {
-    background-color: #33ccff;
+    background-color: #557a95;
     height: 100vh
 }
 
