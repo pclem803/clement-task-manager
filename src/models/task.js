@@ -10,6 +10,23 @@ const taskSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    category: {
+        type: String,
+        required: false,
+        default: 'Other'
+    },
+    date: {
+        type: Number,
+        required: true
+    },
+    start:{
+        type:Number,
+        required: false
+    },
+    end: {
+        type: Number,
+        required: true
+    },
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         required: true

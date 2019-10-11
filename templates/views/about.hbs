@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="/css/homepagestyle.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet" type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </head>
+ 
+    <body>
+        <header>
+            <h1 class="headertext">Clement To Do App</h1>
+            <nav>
+                <div class="row headerrow">
+                    <ul class="main-nav">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+
+
+        <section class="aboutpage">
+            <div>
+                <h2>How to Use:</h2>
+                <h3>
+                    To get started, simply click the Add Task button in the top left of the page and fill out the form criteria.
+                </h3>
+
+                <h3>
+                    On Submit, the task is added to the calendar. Tasks for the current calendar day are added to the Today's Tasks section
+                </h3>
+
+                <h3>
+                    To mark a task as completed, simply click the task in the Today's Task section. 
+                </h3>
+
+                <h3>
+                    To delete a task, search the name of the task using the search bar beneath the Add Task button and press Delete.
+                </h3>
+
+                <h3>
+                    Enjoy the benefits of an organized, more productive lifestyle!
+                </h3>
+
+                <br>
+                <br>
+
+
+                <h2>The Tech:</h2>
+                <h3>
+                    Securely stores and accesses user data through a REST API using Node.js Express framework and NoSQL document database via MongoDB atlas.
+                </h3>
+
+                <h3>
+                    Accessed and sent user profile and task data using HTTP communication protocol and JSON authentication tokens.
+                </h3>
+
+                <h3>
+                    Secured client server communication via password encryption and validation middleware.
+                </h3>
+            </div>
+        </section>
+
+        <div>
+            <p id="datastorage">{{tasks}}</p>
+            <p id="tokenstorage">{{token}}</p>
+        </div>
+
+        <p>Created by Philip Clement</p>
+
+    </body>
+
+
+</html>

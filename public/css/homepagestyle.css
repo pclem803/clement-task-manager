@@ -1,0 +1,1464 @@
+/* -------------------------------------------*/
+/* BASIC SETUP 
+color = #33ccff
+color2=557a95
+*/
+/* -------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color:#fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size:20px;
+    font-weight:300;
+    text-rendering: optimizeLegibility;
+}
+
+
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear:both;
+    display: block;
+    height:0;
+    visibility:hidden;
+}
+
+
+/* -------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto 0 auto;   
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding:1%;
+}
+
+/* FORM */
+
+
+/* -----HEADINGS----- */
+h1,h2,h3 {
+    
+    font-weight:300;
+    text-transform:uppercase;
+}
+
+.HomepageTitle{
+    margin-bottom:0px;
+}
+
+h1 {
+    margin-top:0;
+    color: white;
+    font-size: 240%;
+    word-spacing: 1px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size:180%;
+    word-spacing: 2px;
+    text-align:center;
+    margin-bottom:30px;
+    letter-spacing: 1px;
+}
+
+h2:after{
+    display: block;
+    height:2px;
+    background-color:#557a95;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+	margin-bottom:15px;
+	
+    
+}
+
+/* -----PARAGRAPHS----- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left:15%;
+    text-align:center;
+}
+
+.box p {
+    font-size: 90%;
+    line-height:145%
+}
+
+/* -----BUTTONS----- */
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+	display: inline-block;
+	margin-right:0px;
+    padding: 10px 30px; /* for styling button */
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color .5s, border .5s, color, .5s
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color:#557a95;
+    border: 1px solid #557a95;
+    margin-right: 10px;
+    color: white;
+    margin-right: 15px
+}
+
+.btn-full-white:link,
+.btn-full-white:visited,
+input[type=submit] {
+    background-color:#fff;
+    border: 1px solid #fff;
+    margin-left:53vh;
+    color: #557a95;
+    margin-right: 15px
+}
+
+.btn-full-white:hover,
+.btn-full-white:active {
+    border: 1px solid #fff;
+    color: white;
+}
+
+
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #557a95;
+    color: #557a95;
+    
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type_submit]:active {
+    background-color: #557a95;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #557a95;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #557a95;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+/* -------------------------------------------*/
+/* HEADER */
+/* -------------------------------------------*/
+
+header {
+    background-color: #557a95;
+	height: 10vh;
+	padding-top: 20px;
+    background-size: cover;
+    background-position: center;
+	background-attachment: fixed;
+	margin-bottom:0px;
+}
+
+.headerrow{
+	max-width: none;
+}
+
+
+.hero-text-box {
+    position:relative;
+    width: 50%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height:100px;
+    width:auto;
+    float: left;
+	margin-top: 20px;
+}
+
+.headertext {
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 0px;
+
+}
+.main-nav {
+	float: right;
+    list-style: none;
+	margin-top: 15px;
+	padding-left: 30px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+nav {
+	margin-bottom: 20px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 0px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom .5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #fff;
+}
+
+footer {
+    background-color: #fff;
+    margin-top: 0px;
+    padding: 16px 0;
+}
+
+.footer-of-index {
+    background-color: #33ccff;
+    height: 75vh
+}
+
+.footer-of-index 
+.form-style-8 {
+    margin-top: 12.5vh;
+}
+
+
+.redirect-page {
+    background-color: #33ccff;
+    height: 100vh
+}
+
+.redirect-page .form-style-8 {
+    margin-top: 12.5vh;
+}
+
+.login-section {
+    background-color: #fff;
+    height: 75vh
+}
+
+.login-section 
+.form-style-8 {
+    margin-top: 12.5vh;
+}
+
+.tasks{
+	height: 100vh;
+}
+
+
+
+
+/* -------------------------------------------*/
+/* HOMEPAGE */
+/* -------------------------------------------*/
+
+.homepage{
+	padding-top:20px;
+}
+.homepage-nav{
+	margin-bottom:0px;
+}
+.task-div{
+	display: inline-block
+}
+.task-list{
+	list-style-type: none;
+	padding-left: 50px;
+	display: inline-block
+}
+
+.left-side {
+	display:inline-block;
+}
+
+
+.task-list .task-submit {
+	margin-left:100px;
+	display: inline-block
+}
+
+
+/* ADD MODAL */
+.AddTaskbtn {
+	margin-left:20px;
+	height: 50px;
+	width: 300px;
+	font-size: 150%;
+	font-weight: 300;
+	margin-bottom:0px;
+}
+
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content/Box */
+   .modal-content {
+	background-color: #fefefe;
+	margin: 6.8% 20%; /* 15% from the top and centered */
+	margin-right:0px;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40vh; /* set width of modal box*/
+	height: 64vh;
+  }
+
+  .modal-content .ModalSubmit {
+	  margin-left: 50%;
+	  display: inline-block
+  }
+
+
+
+
+
+
+
+  /*MODAL FORM */
+
+  .form-style-8{
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 300px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
+.form-style-8 h2{
+	background: #4D4D4D;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+
+.form-style-8 input[type="text"],
+.form-style-8 input[type="date"],
+.form-style-8 input[type="datetime"],
+.form-style-8 input[type="email"],
+.form-style-8 input[type="number"],
+.form-style-8 input[type="search"],
+.form-style-8 input[type="time"],
+.form-style-8 input[type="url"],
+.form-style-8 input[type="password"],
+.form-style-8 textarea,
+.form-style-8 select 
+{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	background: transparent;
+	margin-bottom: 20%;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 30px;
+}
+
+.form-style-8 textarea{
+	resize:none;
+	overflow: hidden;
+}
+
+
+.form-style-8 input[type="button"], 
+.form-style-8 input[type="submit"]{
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: #2CBBBB;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 14px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.form-style-8 input[type="button"]:hover, 
+.form-style-8 input[type="submit"]:hover {
+	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+	background-color:#34CACA;
+}
+
+form select {
+	height: 30px;
+}
+
+
+
+
+  .ModalSubmit{
+	padding: 0px;
+	padding-top: 0px;
+	margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 90%;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom .5s;
+  }
+  
+
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  /*-- Recent Tasks --*/
+.recent-tasks h3 {
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+  .recent-tasks{
+	margin-left:20px;
+	margin-top: 20px;
+	height: 600px;
+	width: 300px;
+	padding-right:0px;
+	font-size: 150%;
+	font-weight: 300;
+	margin-bottom:3px;
+	border: 1px solid #888;
+	background-color: #557a95;
+	color: white;
+	overflow-y: scroll;
+  }
+
+  .task{
+	  width: 80%;
+	  min-height: 10%;
+	  margin-left: 10%;
+	  margin-top:3%;
+	  margin-bottom:3%;
+	  border: 1px solid #888;
+	  color: black;
+	  display: flex;
+	  padding: 10px 30px;
+	  text-align: left;
+	  font-weight: 300;
+	  font-size: 50%;
+	  text-decoration: none;
+	  text-transform: uppercase;
+	  border-radius: 10px;
+	  overflow-y: scroll;
+	  text-align: center;
+  }
+
+
+.container{
+	position: absolute;
+	display: inline-block;
+	width:73%;
+	height:80%;
+	min-width: 1250px;
+}
+
+
+tr, td {
+	border: 1px solid black;
+}
+
+td {
+	vertical-align: top;
+}
+
+.row{
+	margin-left:0px;
+}
+
+.days-of-week {
+	width:100%;
+	margin-bottom: 25px;
+	margin-right:0px;
+	font-weight: bold;
+}
+
+.first-day-of-week{
+	padding-left:35px;
+	margin-left: 125px;
+}
+
+
+h3 p {
+	display: inline-block;
+	padding-left:107px;
+	margin-bottom: 0px;
+}
+
+.today-date{
+	margin-left: 180px;
+}
+
+.calrow{
+	margin-left: 100px;
+	position: relative;
+	margin-top: 0px;
+	display: inline-block;
+	width: 100%
+}
+.caldate {
+	display: inline-block;
+	width: 150px;
+	height: 100px;
+	padding: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 2px solid black;
+	background-color: white;
+	font-weight: bold;
+	border-radius: 10px;
+	color: #557a95;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transition: width .5s, height .5s, font-size .5s;
+	transition-delay: 0s;
+}
+
+.caldate:hover{
+	width: 225px;
+	height:225px;
+	font-size: 30px;
+	transition: width .5s, height .5s, font-size .5s;
+	transition-delay: .75s;
+}
+
+
+li {
+	margin-bottom:5px;
+	line-height:15px;
+	padding:0px;
+}
+
+.legend {
+	display: inline-block
+}
+
+.legend p {
+	margin-left: 35px;
+	font-size: 20px;
+	float: left;
+}
+.color-box-1 {
+	background-color: #888;
+	height:30px;
+	width: 125px;
+	margin-left: 10px;
+	float:right;
+	border-radius: 200px
+}
+.color-box-2 {
+	background-color: #fff;
+	height:30px;
+	width: 125px;
+	margin-left: 10px;
+	float:right;
+	margin-bottom: 15px;
+	border-radius: 200px
+}
+
+.recent-tasks .instructions {
+	margin-left: 35px;
+}
+
+
+
+
+
+
+
+.delete-task-form body {
+  font: 16px Arial;
+}
+.delete-task-form .autocomplete {
+  /*the container must be positioned relative:*/
+  margin-left: 20px;
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  margin-right: 5px;
+}
+.delete-task-form input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+.delete-task-form input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+.delete-task-form .delete-submit {
+  background-color: #557a95;
+  color: #fff;
+  margin-left:0px;
+  border-radius: 0px;
+}
+.delete-task-form .autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.delete-task-form .autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.delete-task-form .autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.delete-task-form .autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #557a95 !important;
+  color: #ffffff;
+}
+
+
+.aboutpage h3{
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: inside;
+	width:50%;
+	margin-left:25%;
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+/* THIS IS GRID CODE /*
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+.row {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		/*margin: 1% 0 1% 0%;*/
+        margin: 0;
+	}
+}
+
+
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span-2-of-2 {
+	width: 100%;
+}
+
+.span-1-of-2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-2-of-2 {
+		width: 100%; 
+	}
+	.span-1-of-2 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span-3-of-3 {
+	width: 100%; 
+}
+
+.span-2-of-3 {
+	width: 66.13%; 
+}
+
+.span-1-of-3 {
+	width: 32.26%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-3-of-3 {
+		width: 100%; 
+	}
+	.span-2-of-3 {
+		width: 100%; 
+	}
+	.span-1-of-3 {
+		width: 100%;
+	}
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.span-4-of-4 {
+	width: 100%; 
+}
+
+.span-3-of-4 {
+	width: 74.6%; 
+}
+
+.span-2-of-4 {
+	width: 49.2%; 
+}
+
+.span-1-of-4 {
+	width: 23.8%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-4-of-4 {
+		width: 100%; 
+	}
+	.span-3-of-4 {
+		width: 100%; 
+	}
+	.span-2-of-4 {
+		width: 100%; 
+	}
+	.span-1-of-4 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF FIVE   ============================================================================= */
+
+	
+.span-5-of-5 {
+	width: 100%;
+}
+
+.span-4-of-5 {
+  	width: 79.68%; 
+}
+
+.span-3-of-5 {
+  	width: 59.36%; 
+}
+
+.span-2-of-5 {
+  	width: 39.04%;
+}
+
+.span-1-of-5 {
+  	width: 18.72%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-5-of-5 {
+		width: 100%; 
+	}
+	.span-4-of-5 {
+		width: 100%; 
+	}
+	.span-3-of-5 {
+		width: 100%; 
+	}
+	.span-2-of-5 {
+		width: 100%; 
+	}
+	.span-1-of-5 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF SIX   ============================================================================= */
+
+
+.span-6-of-6 {
+	width: 100%;
+}
+
+.span-5-of-6 {
+  	width: 83.06%;
+}
+
+.span-4-of-6 {
+  	width: 66.13%;
+}
+
+.span-3-of-6 {
+  	width: 49.2%;
+}
+
+.span-2-of-6 {
+  	width: 32.26%;
+}
+
+.span-1-of-6 {
+  	width: 15.33%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-6-of-6 {
+		width: 100%; 
+	}
+	.span-5-of-6 {
+		width: 100%; 
+	}
+	.span-4-of-6 {
+		width: 100%; 
+	}
+	.span-3-of-6 {
+		width: 100%; 
+	}
+	.span-2-of-6 {
+		width: 100%; 
+	}
+	.span-1-of-6 {
+		width: 100%; 
+	}
+}
+
+
+
+/*  GRID OF SEVEN   ============================================================================= */
+
+
+.span-7-of-7 {
+	width: 100%;
+}
+
+.span-6-of-7 {
+	width: 85.48%;
+}
+
+.span-5-of-7 {
+  	width: 70.97%;
+}
+
+.span-4-of-7 {
+  	width: 56.45%;
+}
+
+.span-3-of-7 {
+  	width: 41.94%;
+}
+
+.span-2-of-7 {
+  	width: 27.42%;
+}
+
+.span-1-of-7 {
+  	width: 12.91%;
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-7-of-7 {
+		width: 100%; 
+	}
+	.span-6-of-7 {
+		width: 100%; 
+	}
+	.span-5-of-7 {
+		width: 100%; 
+	}
+	.span-4-of-7 {
+		width: 100%; 
+	}
+	.span-3-of-7 {
+		width: 100%; 
+	}
+	.span-2-of-7 {
+		width: 100%; 
+	}
+	.span-1-of-7 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF EIGHT   ============================================================================= */
+
+	
+.span-8-of-8 {
+	width: 100%;
+}
+
+.span-7-of-8 {
+	width: 87.3%; 
+}
+
+.span-6-of-8 {
+	width: 74.6%; 
+}
+
+.span-5-of-8 {
+	width: 61.9%; 
+}
+
+.span-4-of-8 {
+	width: 49.2%; 
+}
+
+.span-3-of-8 {
+	width: 36.5%;
+}
+
+.span-2-of-8 {
+	width: 23.8%; 
+}
+
+.span-1-of-8 {
+	width: 11.1%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-8-of-8 {
+		width: 100%; 
+	}
+	.span-7-of-8 {
+		width: 100%; 
+	}
+	.span-6-of-8 {
+		width: 100%; 
+	}
+	.span-5-of-8 {
+		width: 100%; 
+	}
+	.span-4-of-8 {
+		width: 100%; 
+	}
+	.span-3-of-8 {
+		width: 100%; 
+	}
+	.span-2-of-8 {
+		width: 100%; 
+	}
+	.span-1-of-8 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF NINE   ============================================================================= */
+
+
+.span-9-of-9 {
+	width: 100%;
+}
+
+.span-8-of-9 {
+	width: 88.71%;
+}
+
+.span-7-of-9 {
+	width: 77.42%; 
+}
+
+.span-6-of-9 {
+	width: 66.13%; 
+}
+
+.span-5-of-9 {
+	width: 54.84%; 
+}
+
+.span-4-of-9 {
+	width: 43.55%; 
+}
+
+.span-3-of-9 {
+	width: 32.26%;
+}
+
+.span-2-of-9 {
+	width: 20.97%; 
+}
+
+.span-1-of-9 {
+	width: 9.68%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-9-of-9 {
+		width: 100%; 
+	}
+	.span-8-of-9 {
+		width: 100%; 
+	}
+	.span-7-of-9 {
+		width: 100%; 
+	}
+	.span-6-of-9 {
+		width: 100%; 
+	}
+	.span-5-of-9 {
+		width: 100%; 
+	}
+	.span-4-of-9 {
+		width: 100%; 
+	}
+	.span-3-of-9 {
+		width: 100%; 
+	}
+	.span-2-of-9 {
+		width: 100%; 
+	}
+	.span-1-of-9 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF TEN   ============================================================================= */
+
+
+.span-10-of-10 {
+	width: 100%;
+}
+
+.span-9-of-10 {
+	width: 89.84%;
+}
+
+.span-8-of-10 {
+	width: 79.68%;
+}
+
+.span-7-of-10 {
+	width: 69.52%; 
+}
+
+.span-6-of-10 {
+	width: 59.36%; 
+}
+
+.span-5-of-10 {
+	width: 49.2%; 
+}
+
+.span-4-of-10 {
+	width: 39.04%; 
+}
+
+.span-3-of-10 {
+	width: 28.88%;
+}
+
+.span-2-of-10 {
+	width: 18.72%; 
+}
+
+.span-1-of-10 {
+	width: 8.56%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-10-of-10 {
+		width: 100%; 
+	}
+	.span-9-of-10 {
+		width: 100%; 
+	}
+	.span-8-of-10 {
+		width: 100%; 
+	}
+	.span-7-of-10 {
+		width: 100%; 
+	}
+	.span-6-of-10 {
+		width: 100%; 
+	}
+	.span-5-of-10 {
+		width: 100%; 
+	}
+	.span-4-of-10 {
+		width: 100%; 
+	}
+	.span-3-of-10 {
+		width: 100%; 
+	}
+	.span-2-of-10 {
+		width: 100%; 
+	}
+	.span-1-of-10 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF ELEVEN   ============================================================================= */
+
+.span-11-of-11 {
+	width: 100%;
+}
+
+.span-10-of-11 {
+	width: 90.76%;
+}
+
+.span-9-of-11 {
+	width: 81.52%;
+}
+
+.span-8-of-11 {
+	width: 72.29%;
+}
+
+.span-7-of-11 {
+	width: 63.05%; 
+}
+
+.span-6-of-11 {
+	width: 53.81%; 
+}
+
+.span-5-of-11 {
+	width: 44.58%; 
+}
+
+.span-4-of-11 {
+	width: 35.34%; 
+}
+
+.span-3-of-11 {
+	width: 26.1%;
+}
+
+.span-2-of-11 {
+	width: 16.87%; 
+}
+
+.span-1-of-11 {
+	width: 7.63%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-11-of-11 {
+		width: 100%; 
+	}
+	.span-10-of-11 {
+		width: 100%; 
+	}
+	.span-9-of-11 {
+		width: 100%; 
+	}
+	.span-8-of-11 {
+		width: 100%; 
+	}
+	.span-7-of-11 {
+		width: 100%; 
+	}
+	.span-6-of-11 {
+		width: 100%; 
+	}
+	.span-5-of-11 {
+		width: 100%; 
+	}
+	.span-4-of-11 {
+		width: 100%; 
+	}
+	.span-3-of-11 {
+		width: 100%; 
+	}
+	.span-2-of-11 {
+		width: 100%; 
+	}
+	.span-1-of-11 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF TWELVE   ============================================================================= */
+
+.span-12-of-12 {
+	width: 100%;
+}
+
+.span-11-of-12 {
+	width: 91.53%;
+}
+
+.span-10-of-12 {
+	width: 83.06%;
+}
+
+.span-9-of-12 {
+	width: 74.6%;
+}
+
+.span-8-of-12 {
+	width: 66.13%;
+}
+
+.span-7-of-12 {
+	width: 57.66%; 
+}
+
+.span-6-of-12 {
+	width: 49.2%; 
+}
+
+.span-5-of-12 {
+	width: 40.73%; 
+}
+
+.span-4-of-12 {
+	width: 32.26%; 
+}
+
+.span-3-of-12 {
+	width: 23.8%;
+}
+
+.span-2-of-12 {
+	width: 15.33%; 
+}
+
+.span-1-of-12 {
+	width: 6.86%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-12-of-12 {
+		width: 100%; 
+	}
+	.span-11-of-12 {
+		width: 100%; 
+	}
+	.span-10-of-12 {
+		width: 100%; 
+	}
+	.span-9-of-12 {
+		width: 100%; 
+	}
+	.span-8-of-12 {
+		width: 100%; 
+	}
+	.span-7-of-12 {
+		width: 100%; 
+	}
+	.span-6-of-12 {
+		width: 100%; 
+	}
+	.span-5-of-12 {
+		width: 100%; 
+	}
+	.span-4-of-12 {
+		width: 100%; 
+	}
+	.span-3-of-12 {
+		width: 100%; 
+	}
+	.span-2-of-12 {
+		width: 100%; 
+	}
+	.span-1-of-12 {
+		width: 100%; 
+	}
+}

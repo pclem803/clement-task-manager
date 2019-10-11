@@ -12,8 +12,8 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        unique: true,
         required: true,
+        unique: true,
         trim: true,
         lowercase: true,
         validate(value) {
@@ -50,7 +50,12 @@ const userSchema = new mongoose.Schema({
     }],
     avatar: {
         type: Buffer
-    }
+    },
+    categories: [{
+        category: {
+            type: String
+        }
+    }]
 }, {
     timestamps:true
 })
