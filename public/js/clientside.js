@@ -1,5 +1,6 @@
 //ONLOAD FUNCTION
 window.onload = function (){
+  createCalendar()
   var alltasksdata_box = document.getElementById("datastorage");
   var alltasksdata = alltasksdata_box.textContent
   var alltasks=JSON.parse(alltasksdata)
@@ -11,9 +12,6 @@ window.onload = function (){
   }
   var datatoken = document.getElementById("tokenstorage")
   var authenticationToken=datatoken.textContent
-  console.log(alltaskdesc)
-  console.log(alltaskid)
-  console.log(authenticationToken)
 
   const delete_search = document.getElementById("myInput")
   autocomplete(delete_search, alltaskdesc)
@@ -25,8 +23,6 @@ window.onload = function (){
   }
   //To get User Data
   getTodaysTasks()
-  
-  createCalendar()//CALL CALENDAR FUNCTION
 
 }
 
@@ -88,6 +84,7 @@ function createCalendar() {
   var table = document.getElementById("calendar")
   var date = 1;
   var num_days = getDaysInMonth(month, year)
+  num_days+=1;
 
   var title = document.getElementById("cal-date")
   title.innerHTML = months[month] + ', ' + year;
@@ -245,8 +242,7 @@ function completeTask(id, authToken, completed, task_div){
         method:'PATCH',
       }
       fetch('./'+id+'/update?authorization='+authToken+'&task_id='+!completed, options)
-      .then (setTimeout(document.location.reload(true), 2000))
-      .catch(error=>console.log(error))
+      .then (setTimeout(function(){document.location.reload(true)}, 5))
     }
     
     return newpatch(patch)
@@ -352,7 +348,6 @@ document.addEventListener("click", function (e) {
 }
 
 function deleteTask(desc_array, id_array, authToken){
-  console.log('delete tasks is getting called')
   counter=0;
   task_desc=document.getElementById("myInput").value
   for (let jj=0; jj<desc_array.length; jj++){
@@ -364,17 +359,15 @@ function deleteTask(desc_array, id_array, authToken){
     }
   }
   var task_id = id_array[counter]
-  console.log(desc_array, id_array, authToken, task_id)
   const options={
     method:'DELETE'
   }
   return fetch('./'+task_id+'/delete?authorization='+authToken, options)
-  .then (document.location.reload(true))
+  .then (document.location.reload())
   .catch(error=>console.log(error))
 }
 
 function logOut(authToken){
-  console.log("This is running")
   return fetch('/users/logoutAll?authorization='+authToken,{
     method:"POST"
   })

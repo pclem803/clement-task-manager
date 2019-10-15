@@ -14,10 +14,8 @@
             <nav>
                 <div class="row headerrow">
                     <ul class="main-nav">
-                        <li><a href="/about"> About</a></li>
                         <li><a id="logout-btn"href="/">Logout</a></li>
-                        <li><a class="sign-up-button" href="#sign-up">Profile</a></li>
-                        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                        <li><a href="https://github.com/pclem803"><ion-icon name="logo-github"></ion-icon></a></li>
                     </ul>
                 </div>
 
@@ -102,17 +100,19 @@
 
                 <!-- The Recent Tasks Category -->
                 <div id = "recent-tasks" class="recent-tasks">
-                    <h3>Today's Tasks</h3>
-                    <div class="row legend">
-                        <p>Complete:</p>
-                        <div class="color-box-1">
+                        <div class="row legend">
+                            <h3>Today's Tasks</h3>
+                            <p>Complete:</p>
+                            <div class="color-box-1">
+                            </div>
+                            <br>
+                            <p>Incomplete:</p>
+                            <div class="color-box-2">
+                            </div>
                         </div>
-                        <br>
-                        <p>Incomplete:</p>
-                        <div class="color-box-2">
-                        </div>
+                        <p class="instructions">Click to Complete!</p>
                     </div>
-                    <p class="instructions">Click to Complete!</p>
+
                 </div>
             </div>
             
@@ -140,8 +140,8 @@
         </section>
 
         <div>
-            <p id="datastorage">{{tasks}}</p>
-            <p id="tokenstorage">{{token}}</p>
+            <p id="datastorage" style="visibility: hidden">{{tasks}}</p>
+            <p id="tokenstorage"style="visibility:hidden">{{token}}</p>
         </div>
 
         <p>Created by Philip Clement</p>

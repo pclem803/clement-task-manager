@@ -67,8 +67,6 @@ router.get('/tasks/:id/readone', auth, async (req, res) => {
 })
 
 router.patch('/tasks/:id/update', auth, async (req, res) => {
-    console.log(req.params.id)
-    console.log(req.query.task_id)
     const updates = Object.keys(req.body)
     const allowedUpdates = ['description', 'completed']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -79,9 +77,7 @@ router.patch('/tasks/:id/update', auth, async (req, res) => {
 
     try {
         const task = await Task.findOne({_id: req.params.id, owner: req.user._id})
-        console.log(task)
         task.completed=req.query.task_id
-        console.log(task)
 
         if (!task) {
             return res.status(404).send()

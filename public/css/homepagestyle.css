@@ -199,13 +199,13 @@ button {
 header {
     background-color: #557a95;
 	height: 100px;
-	width:100vw;
 	padding-top: 20px;
     background-size: cover;
     background-position: center;
 	background-attachment: fixed;
 	margin-bottom:0px;
 	min-width: 1000px;
+	
 }
 
 .headerrow{
@@ -314,7 +314,7 @@ footer {
 /* -------------------------------------------*/
 
 .homepage{
-
+	padding-top: 20px;
 }
 .homepage-nav{
 	margin-bottom:0px;
@@ -520,7 +520,7 @@ form select {
 	border: 1px solid #888;
 	background-color: #557a95;
 	color: white;
-	overflow-y: scroll;
+	overflow-y: auto;
   }
 
   .task{
@@ -532,15 +532,14 @@ form select {
 	  border: 1px solid #888;
 	  color: black;
 	  display: flex;
-	  padding: 10px 30px;
-	  text-align: left;
 	  font-weight: 300;
 	  font-size: 50%;
 	  text-decoration: none;
 	  text-transform: uppercase;
 	  border-radius: 10px;
-	  overflow-y: scroll;
-	  text-align: center;
+	  overflow-y: auto;
+	  align-items: center;
+	  justify-content: center;
   }
 
 
@@ -607,7 +606,7 @@ h3 p {
 	font-weight: bold;
 	border-radius: 10px;
 	color: #557a95;
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	transition: width .5s, height .5s, font-size .5s;
 	transition-delay: 0s;
@@ -630,6 +629,9 @@ li {
 
 .legend {
 	display: inline-block
+}
+.legend h3 {
+	margin-left: 35px;
 }
 
 .legend p {
