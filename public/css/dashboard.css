@@ -1,0 +1,559 @@
+/* -------------------------------------------*/
+/* SET UP */
+/* -------------------------------------------*/
+:root {
+  --main-black: #17252a;
+  --main-blue: #3aafa9;
+  --second-blue: #2b7a78;
+  --main-white: #feffff;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--main-blue);
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+/* -------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------*/
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+}
+
+/* -------------------------------------------*/
+/* TEXT-ELEMENTS */
+/* -------------------------------------------*/
+
+h2 {
+  color: var(--main-blue);
+}
+
+/* -------------------------------------------*/
+/* MAIN-NAV */
+/* -------------------------------------------*/
+
+.nav {
+  display: inline-block;
+  width: 100vw;
+  height: 64.1px;
+  background-color: var(--main-black);
+  min-width: 750px;
+}
+
+.nav h2 {
+  display: inline-block;
+  margin: 40px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin: 0px;
+  float: right;
+  list-style-type: none;
+  margin-right: 40px;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--main-black);
+}
+
+ul h2 {
+  margin-left: 50px;
+  height: 99%;
+  margin-top: 14px;
+  margin-bottom: 0px;
+  margin-right: 37vw;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  height: 100%;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: var(--main-blue);
+  cursor: pointer;
+}
+
+/* -------------------------------------------*/
+/* MAIN-CONTENT */
+/* -------------------------------------------*/
+.main-content {
+  min-width: 750px;
+  overflow: scroll;
+}
+
+.left-side {
+  float: left;
+  background-color: var(--main-black);
+  margin-right: 0px;
+  width: 20%;
+  height: 100vh;
+  outline-color: #17252a;
+}
+
+.right-side {
+  float: left;
+  background-color: var(--main-blue);
+  width: 80%;
+  height: 100vh;
+}
+
+/* -------------------------------------------*/
+/* Calendar */
+/* -------------------------------------------*/
+.calendar {
+  margin: 2.5%;
+  width: 95%;
+  height: 85%;
+  background-color: var(--main-black);
+  border-radius: 10px;
+  color: white;
+}
+
+/* MONTH VIEW */
+
+.cal_row {
+  width: 100%;
+  height: 16.6666667%;
+}
+
+.month_cell {
+  width: 14.2857143%;
+  display: inline-block;
+  text-align: center;
+}
+
+.cal_date_row {
+  width: 99.6%;
+  height: 16.666667%;
+}
+
+.date_cell {
+  overflow-y: scroll;
+  margin-left: 0.67857143%;
+  text-align: left;
+  background-color: var(--main-blue);
+  height: 95%;
+  width: 13.5714286%;
+  border-radius: 4px;
+}
+
+.date_cell h3 {
+  margin-left: 7%;
+  font-size: 90%;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.date_cell p {
+  overflow: auto;
+  margin-left: 7%;
+  font-size: 90%;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.cal_row h2 {
+  text-align: center;
+  font-size: 60px;
+  margin: 0px;
+}
+
+/* -------------------------------------------*/
+/* DASHBOARD */
+/* -------------------------------------------*/
+
+button {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 125%;
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 20%;
+  list-style-type: none;
+  margin-right: 40px;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--main-blue);
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: var(--second-blue);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/*MODAL FORM*/
+
+.modal form {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-black);
+  border-radius: 30px;
+}
+
+.modal form h1 {
+  margin-left: 35%;
+  margin-top: 10px;
+  color: var(--main-white);
+}
+
+.modal select,
+.modal input {
+  margin-left: 20%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  width: 300px;
+  padding: 7px;
+  border: none;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--main-blue);
+  background: transparent;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  color: var(--main-white);
+}
+
+.modal select::placeholder,
+.modal input::placeholder {
+  color: var(--main-white);
+}
+
+.modal input[type="text"] {
+  margin-left: 20%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  width: 300px;
+  padding: 7px;
+  border: none;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--main-blue);
+  background: transparent;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  color: var(--main-white);
+}
+
+.modal input[type="button"],
+.modal input[type="submit"] {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  border: none;
+  margin: 0px;
+  margin-left: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--main-blue);
+  display: block;
+  color: white;
+  text-align: center;
+  height: 65px;
+  padding: 20px 16px;
+  text-decoration: none;
+  margin-left: 40%;
+  margin-top: 2.5%;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.modal input[type="button"]:hover,
+.modal input[type="submit"]:hover {
+  background-color: var(--second-blue);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: var(--main-black);
+  color: white;
+}
+
+.modal-body {
+  background-color: var(--main-black);
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: var(--main-black);
+  color: white;
+}
+
+.delete-task-form{
+    margin-top:10%;
+}
+
+.delete-task-form input[type="button"],
+.delete-task-form input[type="submit"] {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  border: none;
+  margin: 0px;
+  overflow: hidden;
+  background-color: var(--main-blue);
+  display: inline-block;
+  color: white;
+  text-align: center;
+  height: 65px;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-top: 2.5%;
+  transition: 0.5s;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.delete-task-form input[type="button"]:hover,
+.delete-task-form input[type="submit"]:hover {
+  background-color: var(--second-blue);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.delete-task-form input[type="text"] {
+  width: 100%;
+  margin-left: 5%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  padding: 7px;
+  border: none;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--main-blue);
+  background: transparent;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  color: var(--main-white);
+  display: inline-block;
+}
+
+delete-task-form body {
+  font: 16px Arial;
+}
+.delete-task-form .autocomplete {
+  width: 58%;
+  /*the container must be positioned relative:*/
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+  margin-right: 2%;
+}
+
+.delete-task-form input {
+  color: var(--main-black);
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+.delete-task-form input[type="text"] {
+  color: var(--main-black);
+  display: inline-block;
+  background-color: #f1f1f1;
+}
+
+.delete-task-form .delete-submit {
+  display: inline-block;
+  background-color: #557a95;
+  color: #fff;
+  border-radius: 0px;
+}
+.delete-task-form .autocomplete-items {
+  width: 99%;
+  margin-left: 5%;
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.delete-task-form .autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.delete-task-form .autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.delete-task-form .autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #557a95 !important;
+  color: #ffffff;
+}
+
+.delete-task {
+  width: 40%;
+  padding: 0px;
+}
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.recent-tasks{
+    margin-top:20%;
+    text-align: center;
+    color:var(--main-white);
+}
+
+.event-container {
+    margin:0px;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.event-container h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    display: inline-block;
+    width: 60%;
+    background-color: var(--main-blue);
+    border-radius: 10px;
+}
+
+.event-container .visited h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    display: inline-block;
+    width: 60%;
+    background-color: var(--second-blue);
+    border-radius: 10px;
+}
+
+
+

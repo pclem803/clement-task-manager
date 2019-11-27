@@ -1,12 +1,16 @@
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
+const cookieParser = require('cookie-parser');
+
 const auth = async (req,res,next)=>{
     try{
-        const token = req.query.authorization
+        const token = req.cookies.token
         const decoded = jwt.verify(token, process.env.JWT_SECRET)
-        const user = await User.findOne({_id:decoded._id, 'tokens.token':token})
+        req.user = decoded;
+        const user = await User.findOne({_id:decoded._id})
         
         if (!user){
+
             throw new Error()
         }
         req.token = token

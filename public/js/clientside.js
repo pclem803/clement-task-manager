@@ -1,6 +1,9 @@
 //ONLOAD FUNCTION
 window.onload = function (){
+
   createCalendar()
+
+  
   var alltasksdata_box = document.getElementById("datastorage");
   var alltasksdata = alltasksdata_box.textContent
   var alltasks=JSON.parse(alltasksdata)
@@ -372,3 +375,4 @@ function logOut(authToken){
     method:"POST"
   })
 }
+

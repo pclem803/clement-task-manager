@@ -1,153 +1,117 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <link rel="stylesheet" href="/css/homepagestyle.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet" type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    </head>
- 
-    <body>
-        <header>
-            <h1 class="headertext">Clement To Do App</h1>
-            <nav>
-                <div class="row headerrow">
-                    <ul class="main-nav">
-                        <li><a id="logout-btn"href="/">Logout</a></li>
-                        <li><a href="https://github.com/pclem803"><ion-icon name="logo-github"></ion-icon></a></li>
-                    </ul>
-                </div>
+<head>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet"
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
 
-            </nav>
-        </header>
+<body>
+    <section class="nav">
+        <h2>Bubble Calendar</h2>
+        <ul>
+            <li><a id="today_btn">Today</a></li>
+            <li><a id="prev_btn">Previous</a></li>
+            <li><a id="next_btn">Next</a></li>
+            <li><a id="logout_btn">Logout</a></li>
+        </ul>
+    </section>
 
+    <section class="main-content">
+        <div class="left-side">
 
-
-        <section class="homepage">
-            <div class="left-side">
-                    <!-- Trigger/Open The Modal -->
-                <button id="myBtn" class="AddTaskbtn">Add Task</button>
-                <div class="delete-task-form">
-                    <form id="delete_form" autocomplete="off">
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn" class="AddTaskbtn">Add Event</button>
+            <div class="delete-task-form">
+                <form id="delete_form" autocomplete="off">
                     <div class="autocomplete">
-                        <input id="myInput" type="text" name="id" placeholder="Search Task">
+                        <input id="myInput" type="text" name="id" placeholder="Search Event">
                     </div>
                     <input id="delete-submit" type="submit" value="Delete" class="delete-submit">
                 </form>
-                </div>
-                
-                <!-- The Modal -->
-                <div id="AddModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <form class="form-style-8" action="/tasks/create?authorization={{token}}" method="POST">
-                            <input placeholder="Task Description" class="description" name="description" type="text" required>
-                            <select placeholder="Category" class="category" name="category" type="text">
-                                    <option value="" disabled selected class="form-dropdown-default-value">Select Category</option>
-                                    <option value="School">School</option>
-                                    <option value="Work">Work</option>
-                                    <option value="Personal Life">Personal Life</option>
-                                    <option value="Event">Event</option>
-                                    <option value="Other">Other</option>
-                            </select>
-                            <input placeholder="Day of Month (Number)" class="date" name="date" type="number" min="1" max="31" required>
-                            <select placeholder="Start Time" class="start" name="start" type="number" min="0" max="24" required>
-                                <option value="" disabled selected class="form-dropdown-default-value">Start Time</option>
-                                <option value="6">6:00 am</option>
-                                <option value="7">7:00 am</option>
-                                <option value="8">8:00 am</option>
-                                <option value="9">9:00 am</option>
-                                <option value="10">10:00 am</option>
-                                <option value="11">11:00 am</option>
-                                <option value="12">12:00 pm</option>
-                                <option value="13">1:00 pm</option>
-                                <option value="14">2:00 pm</option>
-                                <option value="15">3:00 pm</option>
-                                <option value="16">4:00 pm</option>
-                                <option value="17">5:00 pm</option>
-                                <option value="18">6:00 pm</option>
-                                <option value="19">7:00 pm</option>
-                                <option value="20">8:00 pm</option>
-                                <option value="21">9:00 pm</option>
-                                <option value="22">10:00 pm</option>
-                            </select>
-                            <select placeholder="End Time" class="end" name="end" type="number">
-                                <option value="" disabled selected class="form-dropdown-default-value">End Time</option>
-                                <option value="6">6:00 am</option>
-                                <option value="7">7:00 am</option>
-                                <option value="8">8:00 am</option>
-                                <option value="9">9:00 am</option>
-                                <option value="10">10:00 am</option>
-                                <option value="11">11:00 am</option>
-                                <option value="12">12:00 pm</option>
-                                <option value="13">1:00 pm</option>
-                                <option value="14">2:00 pm</option>
-                                <option value="15">3:00 pm</option>
-                                <option value="16">4:00 pm</option>
-                                <option value="17">5:00 pm</option>
-                                <option value="18">6:00 pm</option>
-                                <option value="19">7:00 pm</option>
-                                <option value="20">8:00 pm</option>
-                                <option value="21">9:00 pm</option>
-                                <option value="22">10:00 pm</option>
-                            </select>
-                            <input class="ModalSubmit" type="submit">
-                        </form>
-                    </div>
-                </div>
+            </div>
 
-                <!-- The Recent Tasks Category -->
-                <div id = "recent-tasks" class="recent-tasks">
-                        <div class="row legend">
-                            <h3>Today's Tasks</h3>
-                            <p>Complete:</p>
-                            <div class="color-box-1">
-                            </div>
-                            <br>
-                            <p>Incomplete:</p>
-                            <div class="color-box-2">
-                            </div>
-                        </div>
-                        <p class="instructions">Click to Complete!</p>
-                    </div>
+
+            <!-- The Recent Tasks Category -->
+            <div id="recent-tasks" class="recent-tasks">
+                <h2>Today's Events:</h2>
+                <div class="event-container" id = "event-container">
 
                 </div>
             </div>
-            
 
-            <!-- THE CALENDAR -->
-            <div class="container">
-                <div class="row">
-                    <h2 id="cal-date" class="today-date"></h2>
-                    <h3 class="days-of-week">
-                        <p class="first-day-of-week">Sun  </p>
-                        <p>Mon</p>
-                        <p>Tue</p>
-                        <p class="middle-of-week">Wed</p>
-                        <p>Thu</p>
-                        <p>Fri</p>
-                        <p>Sat</p>
-                    </h3>
-                </div>
-                
-                <div id="calendar">
-                </div>
 
-            </div>
-
-        </section>
-
-        <div>
-            <p id="datastorage" style="visibility: hidden">{{tasks}}</p>
-            <p id="tokenstorage"style="visibility:hidden">{{token}}</p>
         </div>
 
-        <p>Created by Philip Clement</p>
-        <script src="/js/clientside.js"></script>
+        <div class="right-side">
+            <div class="calendar" id="calendar">
 
-    </body>
+            </div>
+        </div>
+    </section>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Create Event</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-style-8" id='create_task_form'>
+
+                    <input placeholder="Task Description" class="description" id="task_description" name="description"
+                        type="text" required>
+
+                    <select onchange="getnumdays()" placeholder="Month" id="month_select" class="month" name="month"
+                        type="number" required>
+                        <option id="month_placeholder" class="form-dropdown-default-value">Month</option>
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+
+                    <select placeholder="Year" id="year_select" class="year" name="year" type="number" required>
+                        <option vlaue="2019" selected>2019</option>
+                        <option vlaue="2020">2020</option>
+                        <option vlaue="2021">2021</option>
+                        <option vlaue="2022">2022</option>
+                        <option vlaue="2023">2023</option>
+                        <option vlaue="2024">2024</option>
+                    </select>
+
+
+                    <select placeholder="Day" class="date" id="date" name="date" type="number" required>
+
+                    </select>
+
+                    <input class="ModalSubmit" type="submit">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <h3>by Philip Clement</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="/js/homepage.js"></script>
 
 </html>

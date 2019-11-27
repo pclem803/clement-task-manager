@@ -1,0 +1,251 @@
+
+/* -------------------------------------------*/
+/* SET UP */
+/* -------------------------------------------*/
+:root {
+    --main-black: #17252A;
+    --main-blue: #3AAFA9;
+    --second-blue:#2b7a78;
+    --main-white: #FEFFFF;
+}
+
+html{
+    background-color:#fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size:20px;
+    font-weight:300;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    margin:0px;
+    background-color:var(--main-blue)
+}
+/* -------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto 0 auto;   
+}
+
+
+/* -------------------------------------------*/
+/* TEXT-ELEMENTS */
+/* -------------------------------------------*/
+
+h2{
+    color: var(--main-blue);
+}
+
+/* -------------------------------------------*/
+/* MAIN-NAV */
+/* -------------------------------------------*/
+
+.nav{
+    display: inline-block;
+    width:100vw;
+    height: 64.1px;
+    background-color: var(--main-black);
+    min-width: 1000px;
+}
+
+.nav h2{
+    display:inline-block;
+    margin:40px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+ul {
+    margin:0px;
+    float:right;
+    list-style-type: none;
+    margin-right:40px;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-black);
+}
+
+ul h2{
+    margin-left: 50px;
+    height: 99%;
+    margin-top:14px;
+    margin-bottom:0px;
+    margin-right:37vw;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    height: 100%;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color:var(--main-blue);
+}
+.login{
+    height: 64px
+}
+.login input[type="text"],
+.login input[type="password"]{
+    margin-left: 30px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: inline;
+	width: 150px;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid var(--main-blue);
+	background: transparent;
+	font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    color: var(--main-white)
+}
+
+.login input[type="button"], 
+.login input[type="submit"]{
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    border:none;
+    margin:0px;
+    margin-left: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-black);
+    display: inline-block;
+    color: white;
+    text-align: center;
+    height: 65px;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+
+.login input[type="button"]:hover, 
+.login input[type="submit"]:hover{
+    background-color:var(--main-blue);
+    cursor: pointer;
+}
+
+/* -------------------------------------------*/
+/* MAIN-CONTENT */
+/* -------------------------------------------*/
+.main-content{
+    height:100vh;
+    background-color: var(--main-blue);
+    min-width: 1000px;
+}
+
+.main-text-content{
+    float: left;
+    width:30vw;
+    height: 100%;
+    display: inline-block;
+    margin:0px;
+    padding:0px;
+    padding-top: 30vh;
+    padding-left:10vw;
+
+}
+
+.main-text-content h1{
+    margin:0;
+    width: 500px;
+    font-size: 300%;
+    color: var(--main-white)
+}
+
+.main-text-content h3{
+    width: 400px;
+    line-height: 75px;
+    color: var(--main-black)
+}
+
+
+.sign-up-form{
+    width:20vw;
+    height:100%;
+    display: inline-block;
+    float:right;
+    padding-top: 25vh;
+    padding-right: 350px;
+}
+
+.sign-up-form form{
+    width: 400px;
+    height: 400px;
+    background-color: var(--main-black);
+    border-radius: 30px;
+}
+
+.sign-up-form form h1{
+    margin-left:35%;
+    margin-top: 10px;
+    color: var(--main-white)
+}
+
+.sign-up-form input[type="text"],
+.sign-up-form input[type="password"]{
+    margin-left: 25%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 200px;
+	padding: 7px;
+    border: none;
+    margin-top: 20px;
+	border-bottom: 1px solid var(--main-blue);
+	background: transparent;
+	font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    color: var(--main-white)
+}
+
+.sign-up-form input[type="button"], 
+.sign-up-form input[type="submit"]{
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    border:none;
+    margin:0px;
+    margin-left: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-black);
+    display: inline-block;
+    color: white;
+    text-align: center;
+    height: 64px;
+    padding: 20px 16px;
+    text-decoration: none;
+    margin-left: 25%;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.sign-up-form input[type="button"]:hover, 
+.sign-up-form input[type="submit"]:hover{
+    background-color:var(--main-blue);
+    cursor: pointer;
+}
+
+
+
+

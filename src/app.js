@@ -5,6 +5,7 @@ require('./db/mongoose')
 const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
 const bodyParser = require('body-parser')
+const cookie_parser = require('cookie-parser')
 
 const app = express()
 
@@ -13,6 +14,7 @@ app.use(bodyParser.urlencoded())
 app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
+app.use(cookie_parser())
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -39,6 +41,15 @@ app.get('',(req,res)=>{
 app.get('/about',(req,res)=>{
     res.render('about')
 })
+
+app.get('/dashboard', (req,res)=>{
+    res.render('homepage')
+})
+
+app.get('/cookie', (req,res)=>{
+    console.log(req.cookies.token)
+})
+
 
 
 
