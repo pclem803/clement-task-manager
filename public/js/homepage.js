@@ -61,9 +61,16 @@ function createCalendarMonth(month_iter) {
   var month = d.getMonth();
   let month_helper = Math.floor((month + month_iter) / 12);
   month = month + month_iter;
+  console.log(month_iter)
+  console.log(month)
+  console.log(month_helper)
   if (month > 11) {
     month = month - 12 * month_helper;
   }
+  if (month<0){
+    month=month+12 * -1 * month_helper;
+  }
+  console.log(month)
 
   var today = d.getDate();
   let day1 = new Date(year, month).getDay(); //THIS IS A VALUE FOR THE FIRST DAY OF THE MONTH

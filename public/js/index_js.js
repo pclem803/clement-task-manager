@@ -22,7 +22,6 @@ window.onload = function() {
       if (res.status == 201) {
         window.location.pathname = "/dashboard";
       } else {
-        console.log("hello");
         let email_box = document.getElementById("sign_up_email");
         let password_box = document.getElementById("sign_up_password");
         email_box.style.borderColor = "red";
